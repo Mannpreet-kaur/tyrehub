@@ -1,0 +1,15 @@
+{
+  "name": "tyrehub",
+  "version": "1.0.0",
+  "description": "TyreHub - Tyre E-commerce & Shop Management System",
+  "scripts": {
+    "server": "cd server && node index.js",
+    "client": "cd client && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install",
+    "setup": "npm run install-all && cd server && node db/seed.js"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
